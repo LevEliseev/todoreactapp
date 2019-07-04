@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.ul`
     display: flex;
-    flex-direction: column;
+    width: 200px;
     justify-content: space-between;
-    min-height: 100vh;
+    align-items: center;
 `;
