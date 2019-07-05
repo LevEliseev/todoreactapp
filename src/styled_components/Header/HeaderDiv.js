@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.header`
     display: flex;
-    min-height: 80px;
+    min-height: 10vh;
     color: white;
     background-color: #2c3e50;
     background-image:

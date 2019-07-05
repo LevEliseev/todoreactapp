@@ -8,7 +8,7 @@ const HeaderComponent: React.FC = () => {
         <HeaderStyledComponents.HeaderDiv>
             <HeaderStyledComponents.LogoDiv>
                 <HeaderStyledComponents.LogoImageDiv>
-                    <img src={logo} alt="logo" width="100px"/>
+                    <img src={logo} alt="logo" />
                 </HeaderStyledComponents.LogoImageDiv>
                 <HeaderStyledComponents.LogoTextDiv>
                     <p>To-Do List</p>

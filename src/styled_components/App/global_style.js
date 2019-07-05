@@ -1,17 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-/*@font-face {
-    font-family: 'penna';
-    src:
-        url('../../source/penna.otf') format('opentype'),
-        url('../../source/penna.woff2') format('woff2'),
-        url('../../source/penna.woff') format('woff'),
-        url('../../source/penna.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}*/
-
+/*web font*/
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 /* Start of reset */
@@ -59,14 +49,40 @@ table {
     border-spacing: 0;
 }
 /* End of reset */
+
+/*global styles*/
 body {
+    font-family:
+        'Segoe UI', 'Roboto', 'Oxygen','Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif
+    ;
     background-color: white;
-    background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -webkit-linear-gradient(90deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
-    background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -moz-linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0) 79px,
+            rgb(171,206,212) 79px,
+            rgb(171,206,212) 81px,
+            rgba(0,0,0,0) 81px
+        ),
+        linear-gradient(
+            0deg,
+            rgb(238,238,238) 0.1em,
+            rgba(0,0,0,0) 0.1em
+        ),
+        rgb(255, 255, 255)
+    ;
     background-position: auto auto;
     background-origin: padding-box;
     background-clip: border-box;
     background-size: 100% 1.2em;
+}
+a {
+    outline: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 `;
