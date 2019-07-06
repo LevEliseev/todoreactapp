@@ -5,4 +5,5 @@ export default styled.footer`
     background-color: #00010e;
     display: flex;
     justify-content: center;
+    user-select: none;
 `;

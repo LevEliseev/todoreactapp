@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-/*web font*/
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+/*web fonts*/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&display=swap');
 
 /* Start of reset */
 html, body, div, span, applet, object, iframe,
@@ -73,16 +73,17 @@ body {
         ),
         rgb(255, 255, 255)
     ;
-    background-position: auto auto;
-    background-origin: padding-box;
-    background-clip: border-box;
     background-size: 100% 1.2em;
 }
 a {
     outline: none;
+    text-decoration: none;
+    color: white;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family:
+        source-code-pro, Menlo, Monaco, Consolas,
+        'Courier New', monospace
+    ;
 }
 `;

@@ -1,4 +1,4 @@
-import GlobalStyle from './global_style';
+import GlobalStyle from './GlobalStyle';
 import AppDiv from './AppDiv';
 
 export { GlobalStyle, AppDiv };

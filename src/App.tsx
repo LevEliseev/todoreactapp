@@ -12,6 +12,6 @@ const App: React.FC = () => {
             <FooterComponent />
         </AppStyledComponents.AppDiv>
     );
-}
+};
 
 export default App;

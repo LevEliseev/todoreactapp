@@ -8,14 +8,18 @@ const HeaderComponent: React.FC = () => {
         <HeaderStyledComponents.HeaderDiv>
             <HeaderStyledComponents.LogoDiv>
                 <HeaderStyledComponents.LogoImageDiv>
-                    <img src={logo} alt="logo" />
+                    <a href="/"><img src={logo} alt="logo" /></a>
                 </HeaderStyledComponents.LogoImageDiv>
                 <HeaderStyledComponents.LogoTextDiv>
-                    <p>To-Do List</p>
+                    <a href="/"><h1>To-Do List</h1></a>
                 </HeaderStyledComponents.LogoTextDiv>
             </HeaderStyledComponents.LogoDiv>
+            <HeaderStyledComponents.HeaderNav>
+                <HeaderStyledComponents.HeaderNavButton>Log in</HeaderStyledComponents.HeaderNavButton>
+                <HeaderStyledComponents.HeaderNavButton>Sign up</HeaderStyledComponents.HeaderNavButton>
+            </HeaderStyledComponents.HeaderNav>
         </HeaderStyledComponents.HeaderDiv>
     );
-}
+};
 
 export default HeaderComponent;
