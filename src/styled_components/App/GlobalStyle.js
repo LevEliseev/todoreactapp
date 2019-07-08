@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 /*web fonts*/
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Cookie|Great+Vibes&display=swap');
 
 /* Start of reset */
 html, body, div, span, applet, object, iframe,
@@ -79,11 +79,5 @@ a {
     outline: none;
     text-decoration: none;
     color: black;
-}
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas,
-        'Courier New', monospace
-    ;
 }
 `;

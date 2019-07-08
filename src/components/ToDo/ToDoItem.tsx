@@ -12,24 +12,28 @@ interface IProps {
 }
 
 const ToDoItem: React.FC<IProps> = ({title, id, completed}) => {
+    const time = new Date();
+    
     return(
         <ContextConsumer>
             {appContext => appContext && (
                 <ToDoStyledComponents.Item>
                     <ToDoStyledComponents.ItemStatus>
-                        <label htmlFor={id+''}>{completed?'completed':'active'}</label>
                         <input
                             type="checkbox"
                             checked={completed}
                             onChange={() => appContext.toggleToDo(id)}
                             id={id+''}
                         />
+                        <label htmlFor={id+''}>{completed?'done':'active'}</label>
                     </ToDoStyledComponents.ItemStatus>
                     <ToDoStyledComponents.ItemText className={completed?'comp':'notcomp'}>
-                        &nbsp;
                         <span>{title}</span>
-                        &nbsp;
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel orci ut tellus imperdiet volutpat et at ligula. Morbi faucibus sem at malesuada tincidunt. Sed eget dui vitae tortor aliquam volutpat. Vivamus elementum scelerisque tortor sit amet molestie. Mauris non fermentum est. Cras sem augue, tristique nec libero non, ultricies auctor justo. Vestibulum vel ipsum consequat nulla commodo sollicitudin ac eget justo. Vestibulum facilisis dapibus libero. Nunc accumsan purus porttitor vulputate blandit. Nullam euismod dictum ullamcorper.</p>
                     </ToDoStyledComponents.ItemText>
+                    <ToDoStyledComponents.ItemDate>
+                        <span>{time.toLocaleDateString()}</span>
+                    </ToDoStyledComponents.ItemDate>
                     <ToDoStyledComponents.ItemControls>
                         <button><img src={editImg} alt="editBtn" /></button>
                         <button onClick={() => appContext.removeToDo(id)}><img src={deleteImg} alt="deleteBtn" /></button>

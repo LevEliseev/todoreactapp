@@ -57,7 +57,8 @@ const ToDoComponent: React.FC = () => {
             removeToDo, toggleToDo
         }}>
             <ToDoStyledComponents.ToDoApp>
-                <div>
+                {/* div.MyLists */}
+                <ToDoStyledComponents.AddItem>
                     <p>Add Item:</p>
                     <input
                         type="text"
@@ -65,7 +66,7 @@ const ToDoComponent: React.FC = () => {
                         onChange={event => setToDoTitle(event.target.value)}
                         onKeyPress={addToDo}
                     />
-                </div>
+                </ToDoStyledComponents.AddItem>
                 <ToDoList toDoArray={toDoArray} />
             </ToDoStyledComponents.ToDoApp>
         </ContextProvider>

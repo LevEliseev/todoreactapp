@@ -3,5 +3,8 @@ import styled from 'styled-components';
 export default styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0 5px;
+    width: 45vw;
+    height: 80vh;
+    background: white;
+    border: 2px solid black;
 `;
