@@ -1,4 +1,4 @@
-import FooterDiv from './FooterDiv';
-import ContactNav from './ContactNav';
+import Footer from './Footer';
+import ContactsNav from './ContactsNav';
 
-export { FooterDiv, ContactNav };
+export { Footer, ContactsNav };

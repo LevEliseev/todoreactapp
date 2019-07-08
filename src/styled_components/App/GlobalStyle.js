@@ -78,7 +78,7 @@ body {
 a {
     outline: none;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 code {
     font-family:

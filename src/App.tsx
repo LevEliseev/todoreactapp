@@ -7,12 +7,12 @@ import FooterComponent from './components/Footer/FooterComponent';
 
 const App: React.FC = () => {
     return (
-        <AppStyledComponents.AppDiv>
+        <AppStyledComponents.App>
             <AppStyledComponents.GlobalStyle />
             <HeaderComponent />
             <MainComponent />
             <FooterComponent />
-        </AppStyledComponents.AppDiv>
+        </AppStyledComponents.App>
     );
 };
 

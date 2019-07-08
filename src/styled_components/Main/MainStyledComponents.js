@@ -1,3 +1,3 @@
-import MainDiv from './MainDiv';
+import Main from './Main';
 
-export { MainDiv };
+export { Main };

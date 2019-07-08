@@ -5,4 +5,8 @@ export default styled.div`
     align-items: center;
     font-size: 50px;
     font-family: 'Pacifico', cursive;
+    
+    a {
+        color: white;
+    }
 `;

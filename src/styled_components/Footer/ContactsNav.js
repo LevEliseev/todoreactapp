@@ -6,7 +6,7 @@ export default styled.nav`
     justify-content: space-between;
     align-items: center;
 
-    a img {
+    img {
         width: 32px;
     }
 `;

@@ -17,7 +17,7 @@ cursor: pointer;
 &:before {
     content: "";
     box-sizing: border-box;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     left: 0;
     top: 0;
@@ -29,7 +29,7 @@ cursor: pointer;
 &:after {
     content: "";
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     left: 4px;
     top: 4px;

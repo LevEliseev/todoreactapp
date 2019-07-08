@@ -5,9 +5,9 @@ import ToDoComponent from '../ToDo/ToDoComponent';
 
 const MainComponent: React.FC = () => {
     return (
-        <MainStyledComponents.MainDiv>
+        <MainStyledComponents.Main>
             <ToDoComponent />
-        </MainStyledComponents.MainDiv>
+        </MainStyledComponents.Main>
     );
 };
 

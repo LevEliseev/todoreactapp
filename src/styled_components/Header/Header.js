@@ -4,7 +4,6 @@ export default styled.header`
     display: flex;
     justify-content: space-between;
     min-height: 10vh;
-    color: white;
     background-color: #2c3e50;
     background-image:
         linear-gradient(45deg, #34495e 25%, transparent 25%),

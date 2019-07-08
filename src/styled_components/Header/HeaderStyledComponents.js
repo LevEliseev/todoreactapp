@@ -1,8 +1,8 @@
-import HeaderDiv from './HeaderDiv';
-import LogoDiv from './LogoDiv';
-import LogoTextDiv from './LogoTextDiv';
-import LogoImageDiv from './LogoImageDiv';
-import HeaderNav from './HeaderNav';
-import HeaderNavButton from './HeaderNavButton';
+import Header from './Header';
+import Logo from './Logo';
+import LogoText from './LogoText';
+import LogoImage from './LogoImage';
+import ButtonsNav from './ButtonsNav';
+import NavButton from './NavButton';
 
-export { HeaderDiv, LogoDiv, LogoTextDiv, LogoImageDiv, HeaderNav, HeaderNavButton };
+export { Header, Logo, LogoText, LogoImage, ButtonsNav, NavButton };
