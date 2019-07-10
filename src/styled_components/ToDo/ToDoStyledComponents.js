@@ -1,6 +1,7 @@
 import ToDoApp from './ToDoApp';
 /* add-item */
 import AddItem from './AddItem/AddItem';
+import AddItemButton from './AddItem/AddItemButton';
 /* my-lists */
 /* list */
 import List from './List/List';
@@ -19,6 +20,7 @@ import ItemControls from './List/ListItems/Item/ItemControls';
 export {
     ToDoApp,
         AddItem,
+            AddItemButton,
         List,
             ListName,
             ListItems,

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { ToDoStyledComponents } from '../../AppStyles';
 import ToDoList from './ToDoList';
+import AddItem from './AddItem';
 import { ContextProvider } from './Context';
 
 interface IState {
@@ -13,6 +14,7 @@ interface IState {
 const ToDoComponent: React.FC = () => {
     const [toDoArray, setToDoArray] = useState<IState[]>([]);
     const [toDoTitle, setToDoTitle] = useState('');
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         const raw = localStorage.getItem('toDoArray');
@@ -52,22 +54,23 @@ const ToDoComponent: React.FC = () => {
         }))
     }
 
+    const handleToggleClick = () => {
+        setShow(!show);
+    }
+
+    const eventFunc = (event: any): any => {
+        setToDoTitle(event.target.value);
+    }
+
     return (
         <ContextProvider value={{
-            removeToDo, toggleToDo
+            removeToDo, toggleToDo, addToDo, eventFunc
         }}>
             <ToDoStyledComponents.ToDoApp>
                 {/* div.MyLists */}
-                <ToDoStyledComponents.AddItem>
-                    <p>Add Item:</p>
-                    <input
-                        type="text"
-                        value={toDoTitle}
-                        onChange={event => setToDoTitle(event.target.value)}
-                        onKeyPress={addToDo}
-                    />
-                </ToDoStyledComponents.AddItem>
-                <ToDoList toDoArray={toDoArray} />
+                <ToDoStyledComponents.AddItemButton onClick={handleToggleClick}>Добавить</ToDoStyledComponents.AddItemButton>
+                <AddItem show={show} toDoTitle={toDoTitle}/>
+                <ToDoList toDoArray={toDoArray}/>
             </ToDoStyledComponents.ToDoApp>
         </ContextProvider>
     );

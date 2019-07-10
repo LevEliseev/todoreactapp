@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.button`
     position: absolute;
     color: white;
-    padding-left: 3px;
-    top: 50%;
-    left: 50%;
 `;
