@@ -5,6 +5,7 @@ type ContextProps = {
     toggleToDo: (id: number) => void;
     addToDo: (event: any) => void;
     eventFunc: (event: any) => any;
+    handleSubmit: (event: any) => any;
 };
 
 const Context = React.createContext<ContextProps | null>(null);

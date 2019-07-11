@@ -62,13 +62,27 @@ const ToDoComponent: React.FC = () => {
         setToDoTitle(event.target.value);
     }
 
+    const handleSubmit = (event: any) => {
+        setToDoArray([
+            ...toDoArray,
+            {
+                id: Date.now(),
+                title: toDoTitle,
+                completed: false
+            }
+        ]);
+        setToDoTitle('');
+        setShow(false);
+        event.preventDefault();
+    }
+
     return (
         <ContextProvider value={{
-            removeToDo, toggleToDo, addToDo, eventFunc
+            removeToDo, toggleToDo, addToDo, eventFunc, handleSubmit
         }}>
             <ToDoStyledComponents.ToDoApp>
                 {/* div.MyLists */}
-                <ToDoStyledComponents.AddItemButton onClick={handleToggleClick}>Добавить</ToDoStyledComponents.AddItemButton>
+                <ToDoStyledComponents.AddItemButton onClick={handleToggleClick} />
                 <AddItem show={show} toDoTitle={toDoTitle}/>
                 <ToDoList toDoArray={toDoArray}/>
             </ToDoStyledComponents.ToDoApp>

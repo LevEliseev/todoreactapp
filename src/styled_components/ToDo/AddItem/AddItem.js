@@ -4,6 +4,8 @@ export default styled.div`
     position: absolute;
     color: white;
     padding-left: 3px;
-    top: 50%;
-    left: 50%;
+    left: -210px;
+    background-color: black;
+    width: 200px;
+    height: 100px;
 `;

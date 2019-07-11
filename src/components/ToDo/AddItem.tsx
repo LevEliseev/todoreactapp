@@ -17,13 +17,17 @@ const AddItem: React.FC<IProps> = ({show, toDoTitle}) => {
         <ContextConsumer>
             {appContext => appContext && (
                 <ToDoStyledComponents.AddItem>
-                    <p>Add Item:</p>
-                    <input
-                        type="text"
-                        value={toDoTitle}
-                        onChange={(event) => appContext.eventFunc(event)}
-                        onKeyPress={appContext.addToDo}
-                    />
+                    <form onSubmit={appContext.handleSubmit}>
+                        <label htmlFor="addItemInput">Add item: </label><br />
+                        <input
+                            id="addItemInput"
+                            type="text"
+                            value={toDoTitle}
+                            onChange={(event) => appContext.eventFunc(event)}
+                            onKeyPress={appContext.addToDo}
+                        /><br />
+                        <input type="submit" name="addItemSubmit" id="addItemSubmitId" value="Отправить" />
+                    </form>                    
                 </ToDoStyledComponents.AddItem>
             )}
         </ContextConsumer>
