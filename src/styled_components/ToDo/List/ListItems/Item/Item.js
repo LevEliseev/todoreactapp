@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export default styled.div`
     display: flex;
     border: 1px solid black;
-    height: 8vh;
+    min-height: 8vh;
+    width: 680px;
     margin-bottom: 1vh;
 
     .comp {
@@ -12,5 +13,8 @@ export default styled.div`
     }
     .notcomp {
         color: black;
+    }
+    &:hover p {
+        white-space: normal;
     }
 `;

@@ -20,9 +20,7 @@ export default styled.button`
         line-height: 1.1em;
     }
     &:hover{
-        transform: rotate(45deg);
-        box-shadow: 0 0 1px 15px rgba(#8A3B58, 0.4),
-        0 0 1px 30px rgba(#8A3B58, 0.1),
-        0 0 1px 45px rgba(#8A3B58, 0.1);
+        transform: rotate(90deg);
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
 `;

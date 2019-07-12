@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-    width: 455px;
+    width: 440px;
     border-right: 1px solid gray;
     display: flex;
     flex-direction: column;
@@ -21,5 +21,11 @@ export default styled.div`
         text-overflow: ellipsis;
         font-size: 18px;
         font-family: 'Indie Flower', cursive;
+    }
+
+    
+
+    &:hover p {
+        white-space: normal;
     }
 `;

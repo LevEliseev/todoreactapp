@@ -8,12 +8,17 @@ import { ContextProvider } from './Context';
 interface IState {
     id: number;
     title: string;
+    text: string;
     completed: boolean;
+    date: string;
+
 }
 
 const ToDoComponent: React.FC = () => {
     const [toDoArray, setToDoArray] = useState<IState[]>([]);
     const [toDoTitle, setToDoTitle] = useState('');
+    const [toDoText, setToDoText] = useState('');
+    const [toDoDate, setToDoDate] = useState('');
     const [show, setShow] = useState(false);
 
     useEffect(() => {
@@ -32,7 +37,10 @@ const ToDoComponent: React.FC = () => {
                 {
                     id: Date.now(),
                     title: toDoTitle,
-                    completed: false
+                    text: toDoText,
+                    completed: false,
+                    date: toDoDate
+
                 }
             ]);
             setToDoTitle('');
@@ -62,13 +70,23 @@ const ToDoComponent: React.FC = () => {
         setToDoTitle(event.target.value);
     }
 
+    const eventFunc2 = (event: any): any => {
+        setToDoText(event.target.value);
+    }
+
+    const eventFunc3 = (event: any): any => {
+        setToDoDate(event.target.value);
+    } 
+
     const handleSubmit = (event: any) => {
         setToDoArray([
             ...toDoArray,
             {
                 id: Date.now(),
                 title: toDoTitle,
-                completed: false
+                text: toDoText,
+                completed: false,
+                date: toDoDate
             }
         ]);
         setToDoTitle('');
@@ -78,12 +96,12 @@ const ToDoComponent: React.FC = () => {
 
     return (
         <ContextProvider value={{
-            removeToDo, toggleToDo, addToDo, eventFunc, handleSubmit
+            removeToDo, toggleToDo, addToDo, eventFunc, handleSubmit, eventFunc2, eventFunc3
         }}>
             <ToDoStyledComponents.ToDoApp>
                 {/* div.MyLists */}
                 <ToDoStyledComponents.AddItemButton onClick={handleToggleClick} />
-                <AddItem show={show} toDoTitle={toDoTitle}/>
+                <AddItem show={show} toDoTitle={toDoTitle} toDoText={toDoText} toDoDate={toDoDate} />
                 <ToDoList toDoArray={toDoArray}/>
             </ToDoStyledComponents.ToDoApp>
         </ContextProvider>

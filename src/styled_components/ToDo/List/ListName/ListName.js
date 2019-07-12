@@ -6,7 +6,7 @@ export default styled.div`
     align-items: center;
     margin-bottom: 10px;
     background-color: black;
-    height: 5vh;
+    min-height: 5vh;
     color: white;
     font-size: 34px;
     font-family: 'Cookie', cursive;

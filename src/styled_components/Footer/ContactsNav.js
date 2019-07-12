@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export default styled.nav`
     display: flex;
-    width: 200px;
     justify-content: space-between;
     align-items: center;
+    width: 200px;
 
     img {
         width: 32px;

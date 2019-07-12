@@ -4,7 +4,7 @@ import { ToDoStyledComponents } from '../../AppStyles';
 import ToDoItem from './ToDoItem';
 
 interface IProps {
-    toDoArray: {id: number, title: string, completed: boolean}[];
+    toDoArray: {id: number, title: string, text: string, completed: boolean, date: string}[];
 }
 
 const ToDoList: React.FC<IProps> = ({toDoArray}) => {
