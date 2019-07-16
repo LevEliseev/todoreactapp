@@ -11,7 +11,6 @@ interface IState {
     text: string;
     completed: boolean;
     date: string;
-
 }
 
 const ToDoComponent: React.FC = () => {
