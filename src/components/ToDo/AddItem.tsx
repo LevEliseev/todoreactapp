@@ -40,6 +40,7 @@ const AddItem: React.FC<IProps> = ({show, toDoTitle, toDoText, toDoDate}) => {
                         <input
                             id="addItemDate"
                             type="date"
+                            value = {toDoDate}
                             onChange={(event) => appContext.eventFunc3(event)}
                             onKeyPress={appContext.addToDo}
                         />

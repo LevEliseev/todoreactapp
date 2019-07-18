@@ -19,6 +19,7 @@ const ToDoComponent: React.FC = () => {
     const [toDoText, setToDoText] = useState('');
     const [toDoDate, setToDoDate] = useState('');
     const [show, setShow] = useState(false);
+    const [valid, setValid] = useState(false);
 
     useEffect(() => {
         const raw = localStorage.getItem('toDoArray');
@@ -36,13 +37,15 @@ const ToDoComponent: React.FC = () => {
                 {
                     id: Date.now(),
                     title: toDoTitle,
-                    text: toDoText,
+                    text: toDoText || 'no comment',
                     completed: false,
                     date: toDoDate
 
                 }
             ]);
             setToDoTitle('');
+            setToDoText('');
+            setShow(false);
         }
     }
 
@@ -67,6 +70,7 @@ const ToDoComponent: React.FC = () => {
 
     const eventFunc = (event: any): any => {
         setToDoTitle(event.target.value);
+        setValid(event.target.value.length <= 20 && !!event.target.value.trim())
     }
 
     const eventFunc2 = (event: any): any => {
@@ -78,19 +82,23 @@ const ToDoComponent: React.FC = () => {
     } 
 
     const handleSubmit = (event: any) => {
+        event.preventDefault();
+        if(!valid) return;
         setToDoArray([
             ...toDoArray,
             {
                 id: Date.now(),
                 title: toDoTitle,
-                text: toDoText,
+                text: toDoText || 'no comment',
                 completed: false,
                 date: toDoDate
             }
         ]);
         setToDoTitle('');
+        setToDoText('');
         setShow(false);
-        event.preventDefault();
+        setValid(false);
+        
     }
 
     return (
